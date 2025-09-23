@@ -135,8 +135,6 @@ header {
 	font-size: 1.1em;
 }
 
-
-
 .skills {
 	display: flex;
 	flex-wrap: wrap;
@@ -216,60 +214,89 @@ header {
 	cursor: pointer;
 }
 
+/* footer styles */
+footer {
+	margin-top: 80px;
+	background-color: #141414;
+	padding: 2% 10% 2% 10%;
+}
+
+footer .block-1 {
+	display: flex;
+	justify-content: center;
+	gap: 12px;
+}
+
+footer .info {
+	color: var(--color-white);
+}
+
+footer .info a {
+	color: var(--color-white);
+	text-decoration: none;
+}
+
+footer .copyright {
+	color: var(--color-white);
+	text-align: center;
+	margin-top: 15px;
+	color: var(--color-white);
+}
+
 .title-block {
 	font-size: 28px;
 	text-align: center;
 }
 
 .description {
-    color: #7f8c8d;
-    line-height: 1.6;
-    margin: 0 0 20px 0;
-    font-size: 0.95em;
+	color: #7f8c8d;
+	line-height: 1.6;
+	margin: 0 0 20px 0;
+	font-size: 0.95em;
 }
 
-
 .animal-card.width-double {
-    grid-column: span 2; }
+	grid-column: span 2;
+}
 
 .animal-card.width-triple {
-    grid-column: span 3; 
+	grid-column: span 3;
 }
 
 .animal-card.width-single {
-    grid-column: span 1; 
+	grid-column: span 1;
 }
 
 .animal-card.width-double .animal-image {
-    padding-bottom: 50%;
+	padding-bottom: 50%;
 }
 
 .animal-card.width-triple .animal-image {
-    padding-bottom: 40%; 
+	padding-bottom: 40%;
 }
 
 .animal-card.width-double .animal-info,
 .animal-card.width-triple .animal-info {
-    padding: 30px;
+	padding: 30px;
 }
 
 .animal-card.width-double .description,
 .animal-card.width-triple .description {
-    font-size: 1.05em;
-    line-height: 1.7;
+	font-size: 1.05em;
+	line-height: 1.7;
 }
 
 .animal-card.width-double .skills,
 .animal-card.width-triple .skills {
-    flex-wrap: nowrap;
-    justify-content: space-between;
+	flex-wrap: nowrap;
+	justify-content: space-between;
 }
 
 .animal-card.width-double .skill,
 .animal-card.width-triple .skill {
-    flex: 1;
-    text-align: center;
-    margin: 0 5px;
+	flex: 1;
+	text-align: center;
+	margin: 0 5px;
 }
 
 .date {
