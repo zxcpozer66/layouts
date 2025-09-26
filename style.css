@@ -118,11 +118,7 @@ header {
 	font-size: 1.1em;
 }
 
-.description {
-	color: #777;
-	line-height: 1.6;
-	margin: 0 0 20px 0;
-}
+
 
 .skills {
 	display: flex;
@@ -201,4 +197,60 @@ header {
 
 #visitor-reviews .slider .pagination input {
 	cursor: pointer;
+}
+
+.title-block {
+	font-size: 28px;
+	text-align: center;
+}
+
+.description {
+    color: #7f8c8d;
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+    font-size: 0.95em;
+}
+
+
+.animal-card.width-double {
+    grid-column: span 2; }
+
+.animal-card.width-triple {
+    grid-column: span 3; 
+}
+
+.animal-card.width-single {
+    grid-column: span 1; 
+}
+
+.animal-card.width-double .animal-image {
+    padding-bottom: 50%;
+}
+
+.animal-card.width-triple .animal-image {
+    padding-bottom: 40%; 
+}
+
+.animal-card.width-double .animal-info,
+.animal-card.width-triple .animal-info {
+    padding: 30px;
+}
+
+.animal-card.width-double .description,
+.animal-card.width-triple .description {
+    font-size: 1.05em;
+    line-height: 1.7;
+}
+
+.animal-card.width-double .skills,
+.animal-card.width-triple .skills {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.animal-card.width-double .skill,
+.animal-card.width-triple .skill {
+    flex: 1;
+    text-align: center;
+    margin: 0 5px;
 }

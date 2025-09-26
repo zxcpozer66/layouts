@@ -1,49 +1,127 @@
-const workers = [
+const animals = [
     {
-        image: 'images/zookeeper1.jpg',
-        desciprion: 'Старший смотритель за хищниками с 10-летним опытом работы',
-        fullName: 'Иван Петров',
-        point1: 'Специализируется на крупных кошачьих',
-        point2: 'Разработал новую систему кормления',
-        point3: 'Проводит образовательные экскурсии'
+        image: '../img/животные/тигр.webp',
+        name: 'Дмитрий Смирнов',
+        position: 'Тигренок Лева',
+        description: 'Любит пачкаться в грязи и есть бананы. Очень игривый и общительный.',
+        points: [
+            'Любит плавать в водоемах',
+            'Обожает играть с мячами',
+            'Спит по 16 часов в сутки'
+        ],
+        width: 'double' // Первая карточка - двойная ширина
     },
     {
-        image: 'images/zookeeper2.jpg',
-        desciprion: 'Ветеринарный врач с специализацией на приматах',
-        fullName: 'Мария Сидорова',
-        point1: 'Заботится о здоровье обезьян и лемуров',
-        point2: 'Внедрила программу профилактики заболеваний',
-        point3: 'Участвует в международных исследованиях'
+        image: '../img/животные/тигр.webp',
+        name: 'Алексей Иванов',
+        position: 'Лев Симба',
+        description: 'Король саванны. Обладает величественной внешностью и спокойным характером.',
+        points: [
+            'Любит греться на солнце',
+            'Имеет громкий рык',
+            'Уважает личное пространство'
+        ],
+        width: 'single' // Вторая карточка - одинарная
     },
     {
-        image: 'images/zookeeper3.jpg',
-        desciprion: 'Специалист по птицам и экзотическим пернатым',
-        fullName: 'Алексей Козлов',
-        point1: 'Курирует вольер с тропическими птицами',
-        point2: 'Организовал программу разведения попугаев',
-        point3: 'Проводит шоу с участием хищных птиц'
+        image: '../img/животные/тигр.webp',
+        name: 'Мария Сидорова',
+        position: 'Обезьянка Чита',
+        description: 'Очень умная и ловкая. Любит играть и исследовать окружающее пространство.',
+        points: [
+            'Быстро обучается новому',
+            'Любит фрукты',
+            'Общительная с посетителями'
+        ],
+        width: 'triple' // Третья карточка - тройная ширина
     },
     {
-        image: 'images/zookeeper4.jpg',
-        desciprion: 'Гидротехник и специалист по водным обитателям',
-        fullName: 'Елена Волкова',
-        point1: 'Обслуживает аквариумы и системы фильтрации',
-        point2: 'Заботится о пингвинах и морских котиках',
-        point3: 'Разрабатывает новые водные ландшафты'
+        image: '../img/животные/тигр.webp',
+        name: 'Сергей Кузнецов',
+        position: 'Слоненок Дамбо',
+        description: 'Добродушный гигант с отличной памятью. Обожает водные процедуры.',
+        points: [
+            'Любит обливаться водой',
+            'Обладает хорошей памятью',
+            'Дружелюбный к другим животным'
+        ],
+        width: 'single' // Четвертая карточка - одинарная
     },
     {
-        image: 'images/zookeeper5.jpg',
-        desciprion: 'Эколог и специалист по реинтродукции',
-        fullName: 'Дмитрий Смирнов',
-        point1: 'Координирует программы возвращения животных в природу',
-        point2: 'Изучает поведение животных в естественной среде',
-        point3: 'Организует волонтерские программы'
+        image: '../img/животные/тигр.webp',
+        name: 'Елена Петрова',
+        position: 'Жираф Женя',
+        description: 'Самый высокий обитатель зоопарка. Имеет длинную шею и добрые глаза.',
+        points: [
+            'Питается листьями с высоких деревьев',
+            'Любит бегать по вольеру',
+            'Спокойный и наблюдательный'
+        ],
+        width: 'single' // Пятая карточка - одинарная
     }
 ];
 
-function createCard(data) {
-    const card = document.createElement('div')
-    card.classList.add('worker-card')
-
-    const img = document.createElement('img')
+function createAnimalCard(animal, index) {
+    const card = document.createElement('div');
+    card.classList.add('animal-card');
+    
+    // Добавляем класс ширины в зависимости от данных животного
+    card.classList.add(`width-${animal.width}`);
+    
+    const animalImage = document.createElement('div');
+    animalImage.classList.add('animal-image');
+    
+    const img = document.createElement('img');
+    img.src = animal.image;
+    img.alt = animal.position;
+    animalImage.appendChild(img);
+    
+    const animalInfo = document.createElement('div');
+    animalInfo.classList.add('animal-info');
+    
+    const name = document.createElement('h3');
+    name.textContent = animal.name;
+    animalInfo.appendChild(name);
+    
+    const position = document.createElement('p');
+    position.classList.add('position');
+    position.textContent = animal.position;
+    animalInfo.appendChild(position);
+    
+    const description = document.createElement('p');
+    description.classList.add('description');
+    description.textContent = animal.description;
+    animalInfo.appendChild(description);
+    
+    if (animal.points && animal.points.length > 0) {
+        const skills = document.createElement('div');
+        skills.classList.add('skills');
+        
+        animal.points.forEach(point => {
+            const skill = document.createElement('span');
+            skill.classList.add('skill');
+            skill.textContent = point;
+            skills.appendChild(skill);
+        });
+        
+        animalInfo.appendChild(skills);
+    }
+    
+    card.appendChild(animalImage);
+    card.appendChild(animalInfo);
+    
+    return card;
 }
+
+function initAnimalCards() {
+    const container = document.getElementById('animalsContainer');
+    
+    container.innerHTML = '';
+    
+    animals.forEach((animal, index) => {
+        const card = createAnimalCard(animal, index);
+        container.appendChild(card);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', initAnimalCards);
