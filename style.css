@@ -35,6 +35,23 @@ header {
 	height: 50px;
 }
 
+.call-btn a {
+	display: flex;
+	color: black;
+	text-decoration: none;
+	font-weight: 400;
+	gap: 7px;
+	background-color: var(--color-yellow);
+	border-radius: 4px;
+	padding: 4px 12px 4px 12px;
+}
+
+.call-btn a svg {
+	width: 14px;
+	height: 14px;
+	margin-top: 3px;
+}
+
 .nav-text {
 	margin-left: 15px;
 	font-size: 18px;
@@ -224,8 +241,6 @@ header {
 	font-size: 1.1em;
 }
 
-
-
 .skills {
 	display: flex;
 	flex-wrap: wrap;
@@ -305,6 +320,35 @@ header {
 	cursor: pointer;
 }
 
+/* footer styles */
+footer {
+	margin-top: 80px;
+	background-color: #141414;
+	padding: 2% 10% 2% 10%;
+}
+
+footer .block-1 {
+	display: flex;
+	justify-content: center;
+	gap: 12px;
+}
+
+footer .info {
+	color: var(--color-white);
+}
+
+footer .info a {
+	color: var(--color-white);
+	text-decoration: none;
+}
+
+footer .copyright {
+	color: var(--color-white);
+	text-align: center;
+	margin-top: 15px;
+	color: var(--color-white);
+}
+
 .title-block {
 	font-size: 28px;
 	text-align: center;
@@ -316,7 +360,6 @@ header {
 	margin: 0 0 20px 0;
 	font-size: 0.95em;
 }
-
 
 .animal-card.width-double {
 	grid-column: span 2;
