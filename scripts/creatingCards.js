@@ -65,11 +65,10 @@ function createAnimalCard(animal, index) {
     const card = document.createElement('div');
     card.classList.add('animal-card');
     
-    // Добавляем класс ширины в зависимости от данных животного
     card.classList.add(`width-${animal.width}`);
     
     const animalImage = document.createElement('div');
-    animalImage.classList.add('animal-image');
+    animalImage.classList.add('animal-image')
     
     const img = document.createElement('img');
     img.src = animal.image;

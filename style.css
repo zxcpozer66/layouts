@@ -1,260 +1,256 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
 :root {
-	--color-white: rgb(252, 252, 252);
-	--color-orange: #fb6c06;
-	--color-yellow: #f8d102;
-	--color-green: #008425;
+  --color-white: rgb(252, 252, 252);
+  --color-orange: #fb6c06;
+  --color-yellow: #f8d102;
+  --color-green: #008425;
 }
 
 body {
-	background-color: var(--color-white);
+  background-color: var(--color-white);
 }
 
 header {
-	background: linear-gradient(
-		rgba(255, 145, 66, 0.8),
-		rgba(159, 255, 186, 0.5)
-	);
-	padding: 15px 40px;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(
+    rgba(255, 145, 66, 0.8),
+    rgba(159, 255, 186, 0.5)
+  );
+  padding: 15px 40px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .navbar {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo img {
-	height: 50px;
+  height: 50px;
 }
 
 .nav-text {
-	margin-left: 15px;
-	font-size: 18px;
-	font-weight: 600;
-	color: #333;
+  margin-left: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
 }
 
 .nav-links {
-	list-style: none;
-	display: flex;
-	gap: 25px;
-	margin-left: auto;
-	margin-right: 40px;
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin-left: auto;
+  margin-right: 40px;
 }
 
 .nav-links a {
-	text-decoration: none;
-	font-size: 16px;
-	color: #333;
-	transition: 0.3s;
+  text-decoration: none;
+  font-size: 16px;
+  color: #333;
+  transition: 0.3s;
 }
 
 .call-btn button {
-	padding: 10px 20px;
-	font-size: 16px;
-	background: var(--color-green);
-	color: white;
-	border: none;
-	border-radius: 6px;
-	cursor: pointer;
-	transition: 0.3s;
+  padding: 10px 20px;
+  font-size: 16px;
+  background: var(--color-green);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .workers,
 .animals {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	gap: 30px;
-	padding: 50px 20px;
-	max-width: 1200px;
-	margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .worker-card,
 .animal-card {
-	background: white;
-	border-radius: 15px;
-	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-	overflow: hidden;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
 .worker-image {
-	height: 200px;
-	overflow: hidden;
+  height: 200px;
+  overflow: hidden;
 }
 
-.worker-image img,
+.worker-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .animal-image img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
+	  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .worker-info,
 .animal-info {
-	padding: 25px;
+  padding: 25px;
 }
 
 .worker-info h3 {
-	margin: 0 0 10px 0;
-	font-size: 1.4em;
-	color: #333;
+  margin: 0 0 10px 0;
+  font-size: 1.4em;
+  color: #333;
 }
 
 .position {
-	color: #666;
-	font-weight: 600;
-	margin: 0 0 15px 0;
-	font-size: 1.1em;
+  color: #666;
+  font-weight: 600;
+  margin: 0 0 15px 0;
+  font-size: 1.1em;
 }
 
-
-
 .skills {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .skill {
-	background: #f0f0f0;
-	padding: 5px 12px;
-	border-radius: 20px;
-	font-size: 0.9em;
-	color: #555;
+  background: #f0f0f0;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  color: #555;
 }
 
 .title-block {
-	font-size: 32px;
-	font-weight: 600;
-	text-align: center;
-	align-items: center;
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+  align-items: center;
 }
 
 /* visitor reviews style */
 
 #visitor-reviews .block-title {
-	text-align: center;
-	margin-bottom: 30px;
-	font-size: 32px;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
 }
 
 #visitor-reviews .item-slider {
-	background-color: var(--color-green);
-	width: 35%;
-	border-radius: 12px;
-	display: flex;
-	color: antiquewhite;
-	padding: 1%;
+  background-color: var(--color-green);
+  width: 35%;
+  border-radius: 12px;
+  display: flex;
+  color: antiquewhite;
+  padding: 1%;
 }
 
 #visitor-reviews .item-slider img {
-	width: 20%;
-	padding: 3%;
-	border-radius: 100%;
+  width: 20%;
+  padding: 3%;
+  border-radius: 100%;
 }
 
 #visitor-reviews .item-slider .info {
-	margin-top: 3%;
+  margin-top: 3%;
 }
 
 #visitor-reviews .item-slider .info .full-name {
-	font-weight: 800;
-	font-size: 18px;
-	margin-bottom: 5px;
+  font-weight: 800;
+  font-size: 18px;
+  margin-bottom: 5px;
 }
 
 #visitor-reviews .item-slider .info .text-reviews {
-	font-size: 16px;
+  font-size: 16px;
 }
 
 #visitor-reviews .slides {
-	display: flex;
-	justify-content: center;
-	gap: 5%;
+  display: flex;
+  justify-content: center;
+  gap: 5%;
 }
 
 #visitor-reviews .slider {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #visitor-reviews .slider .pagination {
-	margin-top: 3%;
+  margin-top: 3%;
 }
 
 #visitor-reviews .slider .pagination input {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .title-block {
-	font-size: 28px;
-	text-align: center;
+  font-size: 28px;
+  text-align: center;
 }
 
 .description {
-    color: #7f8c8d;
-    line-height: 1.6;
-    margin: 0 0 20px 0;
-    font-size: 0.95em;
+  color: #7f8c8d;
+  line-height: 1.6;
+  margin: 0 0 20px 0;
+  font-size: 0.95em;
 }
 
-
 .animal-card.width-double {
-    grid-column: span 2; }
+  grid-column: span 2;
+}
 
 .animal-card.width-triple {
-    grid-column: span 3; 
+  grid-column: span 3;
 }
 
 .animal-card.width-single {
-    grid-column: span 1; 
+  grid-column: span 1;
 }
 
-.animal-card.width-double .animal-image {
-    padding-bottom: 50%;
-}
-
-.animal-card.width-triple .animal-image {
-    padding-bottom: 40%; 
-}
 
 .animal-card.width-double .animal-info,
 .animal-card.width-triple .animal-info {
-    padding: 30px;
+  padding: 30px;
 }
 
 .animal-card.width-double .description,
 .animal-card.width-triple .description {
-    font-size: 1.05em;
-    line-height: 1.7;
+  font-size: 1.05em;
+  line-height: 1.7;
 }
 
 .animal-card.width-double .skills,
 .animal-card.width-triple .skills {
-    flex-wrap: nowrap;
-    justify-content: space-between;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }
 
 .animal-card.width-double .skill,
 .animal-card.width-triple .skill {
-    flex: 1;
-    text-align: center;
-    margin: 0 5px;
+  flex: 1;
+  text-align: center;
+  margin: 0 5px;
 }
 
 .date {
-	margin-top: 10px;
+  margin-top: 10px;
 }
