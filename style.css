@@ -275,7 +275,7 @@ header {
 
 #visitor-reviews .item-slider {
 	background-color: var(--color-green);
-	width: 35%;
+	width: 37%;
 	border-radius: 12px;
 	display: flex;
 	color: antiquewhite;
@@ -321,6 +321,13 @@ header {
 
 #visitor-reviews .slider .pagination input {
 	cursor: pointer;
+}
+
+#visitor-reviews .page-1:not(.active),
+#visitor-reviews .page-2:not(.active),
+#visitor-reviews .page-3:not(.active) {
+	opacity: 0;
+	display: none;
 }
 
 /* footer styles */
